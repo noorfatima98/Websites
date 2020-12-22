@@ -1,0 +1,675 @@
+<!Doctype html> 
+<html>
+
+<head>
+    
+    <title>Stationery Store</title>
+    
+    <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+    <link href="fa/css/font-awesome.min.css" rel="stylesheet">
+    <link href ="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/media.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    
+.mySlides {display:none;}
+    body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+    ol.progtrckr {
+    margin: 0;
+    padding: 0;
+    list-style-type :none;
+}
+
+
+    
+</style>
+</head>
+
+<body>
+    
+    <body style="background-color: silver"></body>
+<div id="wrapper">
+    <div id="header">
+<div id="subheader">
+   <div class="container">
+       <p>ONLINE LEGACY OF STUDENTS</p>
+       
+       <a href="#">Guest</a> <a href="#">Consumer</a> <a href="track%20my%20order.html">Track my order</a> <a href="help.html">Customer care</a>
+    </div>
+        </div>
+        <!--==main header==-->
+        <div id="main-header">
+            <!--logo-->
+
+        
+        <div id="logo">
+    <img src="images/logo.png"style="width:90%; height: 130px;  padding-top: :1000px; float: left; left: 500px;">
+            
+    <span id="ist"></span><span id="iist"></span>
+    </div>
+    <!--==search area==-->
+    <div id="search">
+    <form action="">
+    
+    <input class="search-area" type="text" name="text" placeholder="Search Here">
+    <input class="search-btn" type="submit" name="submit" value="SEARCH">
+        </form>
+        </div>
+            <!--==user-menu==-->
+            <div id="user-menu">
+                
+                <li><a href="checkoutpage.html"><!--fa fa-shopping-cart-->
+<br>
+
+
+<!--Unicode-->
+<i style="font-size:35px; top: 10px;" class="fa">&#xf07a;</i></a></li>
+                <li><a href="Login%20form.html" >Login</a></li> <i style="font-size: 35px;top: 10px;"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!--==navigation bar==-->
+    <div id="navigation">
+        <a href="#" class="menu-togglr"><i class="fa fa-bars"></i></a>
+    
+    <nav id="mainav">
+                <a href="index.html">Home</a>
+                <a href="newarrivals.html">New Arrivals</a> 
+                <a href="accessories.html">Accessories</a> 
+                <a href="products.html">Products</a>
+                <a href="form.html">SignUp</a>
+        </nav>
+    
+    </div>
+    <!--============Home-slider==-->
+    <br><br><br><br>
+    <div id="slider">
+    <ul class="bxslider">
+        <h2 class="w3-center"></h2>
+
+<div class="w3-content w3-section" style="max-width:85%">
+  <img class="mySlides" src="images/img1.png" style="width:100%; height: 400px;">
+  <img class="mySlides" src="images/img2.jpg" style="width:100% ; height: 400px;">
+  <img class="mySlides" src="images/img3.PNG" style="width:100%; height: 400px;">
+  <img class="mySlides" src="images/img5.jpg" style="width:100%; height: 400px;">
+  <img class="mySlides" src="images/img6.jpg" style="width:100%; height: 400px;">
+  <img class="mySlides" src="images/img7.PNG" style="width:100%; height: 400px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+
+        
+        </ul>
+        
+    </div>
+
+
+    </div>
+
+    <!----=====category boxes===----->
+    <div class="container">
+        <div id="heading-block">
+        <h2>Category</h2>
+        </div>
+            <!---1st catbox--->
+           <a href="#">
+            
+             <div class="catbox">
+            <img src="images/cat1.jpeg" alt="Folders">
+                <span>Folders</span>
+            
+            </div>
+            </a>
+            <!---2nd catbox--->
+           <a href="#">
+            
+             <div class="catbox">
+            <img src="images/cat2.jpeg" alt="Calculators">
+                <span>Calculators</span>
+            
+            </div>
+            </a>
+            
+            <!---third catbox--->
+           <a href="#">
+            
+             <div class="catbox">
+            <img src="images/cat3.jpeg" alt="Staplers">
+                <span>Staplers</span>
+            
+            </div>
+            </a>
+            <!---fourth catbox--->
+           <a href="#">
+            
+             <div class="catbox">
+            <img src="images/cat4.jpg" alt="Pencil Holders">
+                <span>Pencil Holders</span>
+            
+            </div>
+            </a>
+            <!---fifth catbox--->
+           <a href="#">
+            
+             <div class="catbox">
+            <img src="images/cat5.jpg" alt="Pens">
+                <span>Pens</span>
+            
+            </div>
+            </a>
+            
+             <!---sixth catbox--->
+           <a href="#">
+            
+             <div class="catbox">
+            <img src="images/cat6.jpg" alt="Folders">
+                <span>Other Items</span>
+            
+            </div>
+            </a>
+            
+            <!---HEADING OF CATEGORY-->
+          <div id="heading-block">
+        <h2>Products</h2>
+        </div>
+        
+        <div class="prod-container">
+            <!--first product-->
+        <div class="prod-box">
+            <img src="images/pro1.jpeg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.1000</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            
+            <!--second product-->
+        <div class="prod-box">
+            <img src="images/pro2.jpg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.300</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            <!--third product-->
+        <div class="prod-box">
+            <img src="images/pro3.jpg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.100</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            
+            <!--fourth product-->
+        <div class="prod-box">
+            <img src="images/pro4.jpg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.900</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            <!--fifth product-->
+        <div class="prod-box">
+            <img src="images/pro5.jpeg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            <!--sixth product-->
+        <div class="prod-box">
+            <img src="images/pro6.png" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.100</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div> 
+            <!--seventh product-->
+        <div class="prod-box">
+            <img src="images/pro7.jpg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.100</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            <!--eighth product-->
+        <div class="prod-box">
+            <img src="images/pro8.jpg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.300</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            <!--ninth product-->
+        <div class="prod-box">
+            <img src="images/pro9.jpg" alt="calculator">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality Calculators</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            
+             <!--10th product-->
+        <div class="prod-box">
+            <img src="images/pro10.jpg" alt="Folders">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+             <!--11th product-->
+        <div class="prod-box">
+            <img src="images/pro11.jpg" alt="Folders">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+             <!--12th product-->
+        <div class="prod-box">
+            <img src="images/pro12.jpg" alt="Folders">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+             <!--13th product-->
+        <div class="prod-box">
+            <img src="images/pro13.jpg" alt="Foldersr">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+             <!--14th product-->
+        <div class="prod-box">
+            <img src="images/pro14.jpg" alt="Folders">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+             <!--15th product-->
+        <div class="prod-box">
+            <img src="images/pro15.jpg" alt="Folders">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+             <!--16th product-->
+        <div class="prod-box">
+            <img src="images/pro16.jpg" alt="Folders">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            
+             <!--17th product-->
+        <div class="prod-box">
+            <img src="images/pro17.jpg" alt="Folders">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            
+            <!--18th product-->
+        <div class="prod-box">
+            <img src="images/pro18.jpg" alt="Staplers">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            <!--19th product-->
+        <div class="prod-box">
+            <img src="images/pro19.jpg" alt="Staplers">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+            <!--20th product-->
+        <div class="prod-box">
+            <img src="images/pro20.jpg" alt="Staplers">
+           
+            <div class="prod-trans">
+                <div class="prod-feature">
+                    <p>Best Quality</p>
+                    <p style="color:#fff;font-weight:bold;">Price : Rs.200</p>
+                    <input type="button" value="Add to cart"> 
+                </div>
+            
+            </div>
+            
+            </div>
+           
+            <div class="container">
+            <div id="heading-block">
+                <h2>Offer</h2>
+                </div>
+                
+        <!--Popup Chat Window-->
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+        
+                <!--offer-boxes-->
+                
+                <div class="offer">
+                
+                <a href="#"><img src="images/offer1.jpg">
+                    
+                    </a>
+                </div>
+                
+                 <div class="offer">
+                
+                <a href="#"><img src="images/offer2.jpg">
+                    
+                    </a>
+                </div>
+                
+                 <div class="offer">
+                
+                <a href="#"><img src="images/offer3.jpg">
+                    
+                    </a>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        </div>
+    <div id="footer">
+    <div class="container">
+        <div class="footer_sub">
+            <h2>Our Story</h2>
+        <p>this is my first e-commerce website design in html and css and also using bx-slider.this is my first e-commerce website design in html and css and also using bx-slider.this is my first e-commerce website design in html and css and also using bx-slider.this is my first e-commerce website design in html and css and also using bx-slider.this is my first e-commerce website design in html and css and also using <span><a href="#">Read more...</a></span></p>
+        </div>
+         <div class="footer_sub_2">
+        <center>
+            
+             <h2>Important Links</h2>
+            <ul>
+                <li> <a href="index.html">Home</a></li> 
+                <li><a href="newarrivals.html">New Arrivals</a> </li> 
+                <li><a href="accessories.html">Accessories</a></li> 
+                <li><a href="products.html">Products</a></li> 
+                <li><a href="form.html">SignUp</a></li>
+            </ul>
+             
+             </center>
+        
+        
+        </div>
+         <div class="footer_sub_2">
+             
+        <center>
+             <h2>Social Links</h2>
+            <ul>
+            
+            <li><a href="#">Facebook</a></li>
+                <li><a href="#">Google+</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                
+                
+            </ul>
+             
+             </center>
+        </div>
+         <div class="footer_sub_3">
+        <center>
+             <h2>Subscribe Us</h2>
+        <input type="text" name="subs" placeholder="Write your e-mail" class="subs">
+            <input type="submit" name="submit_btn" value="Subscribe" class="sub_btn">
+            <p class="sub_p">Enter your e-mail id and get a notification from us.</p>
+             </center>
+        </div>
+        
+        </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/my.js"></script>
+    
+    </body>
+
+
+</html>
